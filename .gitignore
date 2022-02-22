@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+auditory hallucinations/[Ll]ibrary/
+auditory hallucinations/[Tt]emp/
+auditory hallucinations/[Oo]bj/
+auditory hallucinations/[Bb]uild/
+auditory hallucinations/[Bb]uilds/
+auditory hallucinations/[Ll]ogs/
