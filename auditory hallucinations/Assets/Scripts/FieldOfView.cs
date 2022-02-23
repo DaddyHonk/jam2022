@@ -5,23 +5,25 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
-    [SerializeField] private LayerMask layerMask;
+    //[SerializeField] private LayerMask layerMask;
     private Mesh mesh;
 
     private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+
+        
     }
 
     private void Update()
     {
+        float fov = 90;
         Vector3 origin = Vector3.zero;
-        float fov = 90f;
-        int rayCount = 50;
-        float angle = 0f;
+        int rayCount = 90;
+        float angle = 90f;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 8f;
+        float viewDistance = 20f;
 
 
         //setup: verticies, uv, triangles
@@ -37,7 +39,7 @@ public class FieldOfView : MonoBehaviour
         for (int i = 0; i < rayCount; i++)
         {
             Vector3 vertex; 
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance/*,layerMask*/);
             if (raycastHit2D.collider == null)
             {
                 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance; //no hit
@@ -69,6 +71,4 @@ public class FieldOfView : MonoBehaviour
         mesh.triangles = triangles;
 
     }
-
-
 }
