@@ -5,36 +5,64 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
+    private Mesh mesh;
+
+    private Vector3 origin = Vector3.zero;
+    [SerializeField]private float fov = 90f;
+    [SerializeField] private int rayCount = 50;
+    [SerializeField] private float angle = 0f;
+    [SerializeField] private float viewDistance = 8f;
+
     private void Start()
     {
-        Mesh mesh = new Mesh();
+        mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+    }
 
-        float fov = 90f;
-        Vector3 origin = Vector3.zero;
-        int rayCount = 2;
-        float angle = 0f;
+    private void Update()
+    {
         float angleIncrease = fov / rayCount;
-        float viewDistance = 50f;
-
-        Vector3[] verticies = new Vector3[rayCount + 1 + 1];
-        Vector2[] uv = new Vector2[verticies.Length];
-        int[] triangles = new int[rayCount * 3];
-
-        verticies[0] = origin;
-        for (int i = 0; i < rayCount; i++)
-        {
-            Vector3 vertex = origin + UtilsC1
-        }
 
 
-        verticies[0] = Vector3.zero;
-        verticies[1] = new Vector3(50, 0);
-        verticies[2] = new Vector3(0, -50);
+            //setup: verticies, uv, triangles
+            Vector3[] verticies = new Vector3[rayCount + 1 + 1];
+            Vector2[] uv = new Vector2[verticies.Length];
+            int[] triangles = new int[rayCount * 3];
 
-        triangles[0] = 0;
-        triangles[1] = 1;
-        triangles[2] = 2;
+            verticies[0] = origin;
+
+            int vertexIndex = 1;
+            int triangleIndax = 0;
+            //sicle through all array's and locate thhem on the correct position
+            for (int i = 0; i < rayCount; i++)
+            {
+                Vector3 vertex; 
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance);
+                if (raycastHit2D.collider == null)
+                {
+                    vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance; //no hit
+                }
+                else
+                {
+                    //hit object
+                    vertex = raycastHit2D.point;
+                }
+                verticies[vertexIndex] = vertex;
+
+                //generate all the triangles
+                if (i > 0)
+                {
+                    triangles[triangleIndax + 0] = 0;
+                    triangles[triangleIndax + 1] = vertexIndex - 1;
+                    triangles[triangleIndax + 2] = vertexIndex;
+
+                    triangleIndax += 3;
+
+                }
+                //move to next angle for next sicle
+                vertexIndex++;
+                angle -= angleIncrease;
+            }
 
         mesh.vertices = verticies;
         mesh.uv = uv;
