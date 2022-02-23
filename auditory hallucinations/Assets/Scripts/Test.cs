@@ -7,6 +7,8 @@ public class Test : MonoBehaviour
     private Vector3 p_MousePosition = Vector3.zero;
     [SerializeField] private GameObject p_Camera;
     [SerializeField] private GameObject p_CameraFlits;
+    [SerializeField] private GameObject[] p_Pictures;
+    private int p_PictureInt;
 
     private void Start()
     {
@@ -23,7 +25,10 @@ public class Test : MonoBehaviour
         {
             Debug.Log("Test");
             StartCoroutine(Flits());
-            
+            if (p_Pictures[p_PictureInt].transform.position == p_MousePosition)
+            {
+                SavePicture();
+            }
         }
     }
 
@@ -32,5 +37,12 @@ public class Test : MonoBehaviour
         p_CameraFlits.SetActive(true);
         yield return new WaitForSeconds(0.25f);
         p_CameraFlits.SetActive(false);
+    }
+
+    void SavePicture()
+    {
+        PlayerPrefs.SetInt("Pictures" + p_PictureInt, 1);
+        PlayerPrefs.Save();
+        p_PictureInt++;
     }
 }
