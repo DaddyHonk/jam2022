@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -21,7 +22,10 @@ public class FieldOfView : MonoBehaviour
         int[] triangles = new int[rayCount * 3];
 
         verticies[0] = origin;
-
+        for (int i = 0; i < rayCount; i++)
+        {
+            Vector3 vertex = origin + UtilsC1
+        }
 
 
         verticies[0] = Vector3.zero;
