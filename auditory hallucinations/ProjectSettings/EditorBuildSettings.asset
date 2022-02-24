@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Jacob/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Jacob/TitleScene.unity
+    guid: 59af72e31bbae504f89396bd8e85f2dd
+  - enabled: 1
+    path: Assets/Jacob/Jacob.unity
+    guid: af3732b0796fcf64a8a84d243d2fd3a9
   m_configObjects: {}

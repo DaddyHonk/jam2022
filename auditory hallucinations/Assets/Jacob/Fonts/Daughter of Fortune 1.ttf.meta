@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3d27be7753e78ed40ab1256d5bf6de2b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Daughter of Fortune
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a047f79323bb5b04cbad2d240af65a1d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
