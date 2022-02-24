@@ -5,7 +5,7 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
-    //[SerializeField] private LayerMask layerMask;
+    [SerializeField] private LayerMask layerMask;
     private Mesh mesh;
     public GameObject Player;
 
@@ -40,7 +40,7 @@ public class FieldOfView : MonoBehaviour
         for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex; 
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance/*,layerMask*/);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
             
             if (raycastHit2D.collider == null)
             {
