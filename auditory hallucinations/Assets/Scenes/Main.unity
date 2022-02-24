@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 689147699}
   - component: {fileID: 689147698}
   - component: {fileID: 689147700}
+  - component: {fileID: 689147701}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -731,6 +732,20 @@ MonoBehaviour:
   spriterender: {fileID: 689147698}
   spriterender2: {fileID: 932757208}
   directionvectortomouse: {x: 0, y: 0, z: 0}
+--- !u!114 &689147701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689147697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339ee48361cbf944799bcbfb5eac9340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FovBlocker: {fileID: 837865053}
+  Disable: 0
 --- !u!1 &696102394
 GameObject:
   m_ObjectHideFlags: 0
