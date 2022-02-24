@@ -7,6 +7,7 @@ public class Test : MonoBehaviour
     private Vector3 p_MousePosition = Vector3.zero;
     [SerializeField] private GameObject p_Camera;
     [SerializeField] private GameObject p_CameraFlits;
+    [SerializeField] private GameObject p_PhotoAlbum;
     [SerializeField] private GameObject[] p_Pictures;
     private int p_PictureInt;
 
@@ -25,11 +26,21 @@ public class Test : MonoBehaviour
         {
             Debug.Log("Test");
             StartCoroutine(Flits());
-            //if (p_Pictures[p_PictureInt].transform.position == p_MousePosition)
-            //{
-            //    SavePicture();
-            //}
+
+            Vector2 mousePos2D = new Vector2(p_MousePosition.x, p_MousePosition.y);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.gameObject.name);
+                hit.collider.gameObject.SetActive(false);
+                SavePicture();
+                Spawner.instance.p_MonsterSpawned = false;
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            p_PhotoAlbum.SetActive(true);
     }
 
     public IEnumerator Flits()

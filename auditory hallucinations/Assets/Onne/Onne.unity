@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 1737614552}
   - component: {fileID: 1737614551}
   - component: {fileID: 1737614550}
+  - component: {fileID: 1737614553}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -428,6 +429,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1737614553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737614549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f1fb09dff681d4fa70c2901bd6374b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_MonsterSpawned: 0
+  _Monster1: {fileID: 5218991570283114963, guid: 72d26b0c686284544b5fc2efcb4ce0ec, type: 3}
+  _Monster2: {fileID: 1199259317428853322, guid: cc8a8aba7e3d7214782e6b2e2610e082, type: 3}
+  _Monster3: {fileID: 3184977503700390980, guid: c30b63b675892a94c9c04fb779e5d2e2, type: 3}
+  _Monster4: {fileID: 7970745047042222700, guid: 8d854b1eeb388814bb428697f21f78e3, type: 3}
 --- !u!1 &2066172472
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,10 +491,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_Sounds:
-  - p_Name: the amalgamtion - speech
+  - p_Name: Amalgamation
     p_Clip: {fileID: 8300000, guid: c66cb2ac16929a64b8ecb8d2b9f83e16, type: 3}
     p_Volume: 0.78
     p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Watcher
+    p_Clip: {fileID: 8300000, guid: 6d273c775071a344babf11798ad1ce9f, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Scuttler
+    p_Clip: {fileID: 8300000, guid: a20baf5c92a5c1844a3969ab2386b749, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Carnivore
+    p_Clip: {fileID: 8300000, guid: c2e90765002acda43a88be0b297ba986, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
     p_Source: {fileID: 0}
 --- !u!1 &2140189382
 GameObject:

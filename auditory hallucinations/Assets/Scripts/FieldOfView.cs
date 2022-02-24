@@ -7,23 +7,24 @@ public class FieldOfView : MonoBehaviour
 {
     //[SerializeField] private LayerMask layerMask;
     private Mesh mesh;
+    public GameObject Player;
 
     private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-
+        //transform.position = Player.transform.position;
         
     }
 
     private void Update()
     {
-        float fov = 90;
-        Vector3 origin = Vector3.zero;
-        int rayCount = 90;
-        float angle = 90f;
+        float fov = 365;
+        Vector3 origin = transform.localPosition;
+        int rayCount = 365;
+        float angle = 0f;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 20f;
+        float viewDistance = 50f;
 
 
         //setup: verticies, uv, triangles
@@ -36,10 +37,11 @@ public class FieldOfView : MonoBehaviour
         int vertexIndex = 1;
         int triangleIndax = 0;
         //sicle through all array's and locate thhem on the correct position
-        for (int i = 0; i < rayCount; i++)
+        for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex; 
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance/*,layerMask*/);
+            
             if (raycastHit2D.collider == null)
             {
                 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance; //no hit
@@ -48,9 +50,10 @@ public class FieldOfView : MonoBehaviour
             {
                 //hit object
                 vertex = raycastHit2D.point;
+                Debug.DrawRay(origin, raycastHit2D.point);  
             }
             verticies[vertexIndex] = vertex;
-        
+
             //generate all the triangles
             if (i > 0)
             {

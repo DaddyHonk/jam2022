@@ -5,8 +5,14 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] p_Sounds;
+
+    public static AudioManager instance;
     void Awake()
     {
+        if (instance != null)
+            Destroy(gameObject);
+        else
+            instance = this;
 
         foreach (Sound s in p_Sounds)
         {
@@ -21,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("the amalgamtion - speech");
+        //Play("the amalgamtion - speech");
     }
 
     public void Play(string name)
