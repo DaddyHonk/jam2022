@@ -2221,8 +2221,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
-      propertyPath: p_Sounds.Array.data[5].p_Volume
+      propertyPath: p_Sounds.Array.data[0].p_Volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[1].p_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[2].p_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[3].p_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[4].p_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[5].p_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f34035461d8e5145bf46947892716b9, type: 3}

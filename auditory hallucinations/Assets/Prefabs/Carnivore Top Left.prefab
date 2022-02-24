@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbc4108869112d40b52d64d60a38b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SpawnLoc1: {x: 6, y: 5}
-  _SpawnLoc2: {x: -6, y: 5}
-  _SpawnLoc3: {x: 6, y: 0}
-  _SpawnLoc4: {x: -6, y: 0}
+  _SpawnLoc1: {x: 7, y: 0}
+  _SpawnLoc2: {x: 7, y: 0}
+  _SpawnLoc3: {x: 7, y: 0}
+  _SpawnLoc4: {x: 7, y: 3}
   RotationRight: {x: 0, y: 180, z: 0}
 --- !u!61 &-8359475644978011462
 BoxCollider2D:
