@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //Play("the amalgamtion - speech");
+        Play("Theme");
     }
 
     public void Play(string name)
@@ -36,5 +36,12 @@ public class AudioManager : MonoBehaviour
         if (s == null)
             return;
         s.p_Source.Play();
+    }
+    public void stop(string name)
+    {
+        Sound s = Array.Find(p_Sounds, sound => sound.p_Name == name);
+        if (s == null)
+            return;
+        s.p_Source.Stop();
     }
 }

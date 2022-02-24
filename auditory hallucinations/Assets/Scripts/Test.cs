@@ -30,6 +30,7 @@ public class Test : MonoBehaviour
             Vector2 mousePos2D = new Vector2(p_MousePosition.x, p_MousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
+            AudioManager.instance.Play("Camera");
             if (hit.collider != null)
             {
                 Debug.Log(hit.collider.gameObject.name);
