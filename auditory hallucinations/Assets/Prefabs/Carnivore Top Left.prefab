@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 016cbc29ae7d62e449e05ade87f7a2dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd6026d9daf628341b894280764269fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   _SpawnLoc2: {x: 7, y: 0}
   _SpawnLoc3: {x: 7, y: 0}
   _SpawnLoc4: {x: 7, y: 3}
-  RotationRight: {x: 0, y: 180, z: 0}
 --- !u!61 &-8359475644978011462
 BoxCollider2D:
   m_ObjectHideFlags: 0
