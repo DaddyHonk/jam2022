@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &599576987106241366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599576987106241364}
+  - component: {fileID: 599576987106241367}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &599576987106241364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599576987106241366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599576987106241367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599576987106241366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944df96dfa84f404284eb98516df5741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_Sounds:
+  - p_Name: Amalgamation
+    p_Clip: {fileID: 8300000, guid: c66cb2ac16929a64b8ecb8d2b9f83e16, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Watcher
+    p_Clip: {fileID: 8300000, guid: 6d273c775071a344babf11798ad1ce9f, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Scuttler
+    p_Clip: {fileID: 8300000, guid: a20baf5c92a5c1844a3969ab2386b749, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Carnivore
+    p_Clip: {fileID: 8300000, guid: c2e90765002acda43a88be0b297ba986, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Camera
+    p_Clip: {fileID: 8300000, guid: 9bd1108d1da09ab44a43ab99dcf3d238, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
+  - p_Name: Theme
+    p_Clip: {fileID: 8300000, guid: 67c173820bd16e64d9bffba56338ca2e, type: 3}
+    p_Volume: 0.78
+    p_Pitch: 1
+    p_loop: 0
+    p_Source: {fileID: 0}
