@@ -11,6 +11,8 @@ public class Test : MonoBehaviour
     [SerializeField] private GameObject[] p_Pictures;
     private int p_PictureInt;
 
+    private bool p_PhotoAlbumShown = false;
+
     private void Start()
     {
         Cursor.visible = false;
@@ -30,6 +32,7 @@ public class Test : MonoBehaviour
             Vector2 mousePos2D = new Vector2(p_MousePosition.x, p_MousePosition.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
+            AudioManager.instance.Play("Camera");
             if (hit.collider != null)
             {
                 Debug.Log(hit.collider.gameObject.name);
@@ -40,7 +43,19 @@ public class Test : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
-            p_PhotoAlbum.SetActive(true);
+        {
+            if(!p_PhotoAlbumShown)
+            {
+                p_PhotoAlbum.SetActive(true);
+                p_PhotoAlbumShown = true;
+            }
+            else
+            {
+                p_PhotoAlbum.SetActive(false);
+                p_PhotoAlbumShown = false;
+            }
+        }
+            
     }
 
     public IEnumerator Flits()
