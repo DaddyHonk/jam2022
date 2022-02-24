@@ -2001,6 +2001,7 @@ GameObject:
   - component: {fileID: 2110360718}
   - component: {fileID: 2110360717}
   - component: {fileID: 2110360720}
+  - component: {fileID: 2110360721}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2091,6 +2092,18 @@ MonoBehaviour:
   _Monster2: {fileID: 1199259317428853322, guid: cc8a8aba7e3d7214782e6b2e2610e082, type: 3}
   _Monster3: {fileID: 3184977503700390980, guid: c30b63b675892a94c9c04fb779e5d2e2, type: 3}
   _Monster4: {fileID: 7970745047042222700, guid: 8d854b1eeb388814bb428697f21f78e3, type: 3}
+--- !u!114 &2110360721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110360716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e3c006f8e5861444a7075630f74864a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2114860148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,6 +2271,22 @@ PrefabInstance:
     - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
       propertyPath: p_Sounds.Array.data[5].p_Volume
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[0].p_StereoPan
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[1].p_StereoPan
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[2].p_StereoPan
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599576987106241367, guid: 7f34035461d8e5145bf46947892716b9, type: 3}
+      propertyPath: p_Sounds.Array.data[3].p_StereoPan
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f34035461d8e5145bf46947892716b9, type: 3}

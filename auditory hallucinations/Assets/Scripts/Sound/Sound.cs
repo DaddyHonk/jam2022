@@ -13,6 +13,9 @@ public class Sound
     [Range(0.1f,3f)]
     public float p_Pitch;
 
+    [Range(-1f, 1f)]
+    public float p_StereoPan;
+
     public bool p_loop;
 
     [HideInInspector]

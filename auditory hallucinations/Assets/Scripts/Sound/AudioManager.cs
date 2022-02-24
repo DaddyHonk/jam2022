@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
             s.p_Source.volume = s.p_Volume;
             s.p_Source.pitch = s.p_Pitch;
             s.p_Source.loop = s.p_loop;
+            s.p_Source.panStereo = s.p_StereoPan;
         }
     }
 

@@ -10,7 +10,8 @@ public class Finish : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Pictures" + 0) == 1 && PlayerPrefs.GetInt("Pictures" + 1) == 1 && PlayerPrefs.GetInt("Pictures" + 2) == 1 && PlayerPrefs.GetInt("Pictures" + 3) == 1)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            Cursor.visible = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
