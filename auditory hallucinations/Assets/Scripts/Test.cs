@@ -25,10 +25,10 @@ public class Test : MonoBehaviour
         {
             Debug.Log("Test");
             StartCoroutine(Flits());
-            if (p_Pictures[p_PictureInt].transform.position == p_MousePosition)
-            {
-                SavePicture();
-            }
+            //if (p_Pictures[p_PictureInt].transform.position == p_MousePosition)
+            //{
+            //    SavePicture();
+            //}
         }
     }
 
